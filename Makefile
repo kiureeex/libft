@@ -1,7 +1,7 @@
 NAME = libft.a
 
-SRC = 
-OBJ = 
+SRCFILES = 
+OBJFILES = $(OBJFILES:.c=.o)
 
 INCLUDES = includes
 CC = cc

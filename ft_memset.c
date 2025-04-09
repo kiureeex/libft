@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 20:01:04 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/09 10:14:19 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/09 14:49:36 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/09 15:08:57 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Verifica se é uma letra ou um número
-
-int	ft_isalnum(int c)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	char	*ptr;
+
+	i = 0;
+	ptr = s;
+	while (i < n)
+	{
+		ptr[i] = c;
+		i++;
+	}
+	return (s);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", ft_isalnum('a'));
-	return (0);
+	char	c[10];
+
+	ft_memset(c, 't', 10);
+	printf("%s", c);
 }*/

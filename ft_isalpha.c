@@ -6,11 +6,10 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:14:04 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/08 20:02:06 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/09 10:14:20 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 // Verifica se é uma letra

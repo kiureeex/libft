@@ -6,11 +6,10 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:11:25 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/08 20:23:51 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/09 10:14:20 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 // a

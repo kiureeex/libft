@@ -1,31 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 20:01:04 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/09 10:14:19 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/09 11:05:43 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/09 12:44:09 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Verifica se é uma letra ou um número
-
-int	ft_isalnum(int c)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	if ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (src[j] != '\0')
+		j++;
+	if (size > 0)
+	{
+		while (src[i] != '\0' && i < size - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (j);
 }
 
 /*int	main(void)
 {
-	printf("%d\n", ft_isalnum('a'));
+	char src[] = "alou meu amigo";
+	char dest[20];
+	printf("%zu\n", ft_strlcpy(dest, src, 7));
 	return (0);
 }*/

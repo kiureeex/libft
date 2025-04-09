@@ -1,28 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 19:55:56 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/09 10:14:21 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/09 13:53:02 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/09 14:49:56 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Verifica se é um número
-
-int	ft_isdigit(int c)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	if (little[j] == '\0')
+		return ((char *)big);
+	while (big[i] != '\0' && i < len)
+	{
+		while (big[i + j] == little[j] && i + j < len)
+		{
+			j++;
+			if (little[j] == '\0')
+				return ((char *)big + i);
+		}
+		i++;
+	}
+	return (NULL);
 }
 /*int	main(void)
 {
-	printf("%d\n", ft_isdigit('1'));
+	char big[] = "alou meus caros amigos";
+	char little[] = "meu";
+	int	len = 15;
+
+	printf("%s\n", ft_strnstr(big, little, len));
 	return (0);
 }*/

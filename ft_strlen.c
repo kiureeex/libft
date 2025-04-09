@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/08 20:01:04 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/09 10:14:19 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/09 09:56:31 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/09 10:18:58 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// Verifica se é uma letra ou um número
-
-int	ft_isalnum(int c)
+size_t	ft_strlen(const char *s)
 {
-	if ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
-}
+	int	i;
 
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
 /*int	main(void)
 {
-	printf("%d\n", ft_isalnum('a'));
+	printf("%zu\n", ft_strlen("meu"));
 	return (0);
 }*/
