@@ -1,29 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 10:21:35 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/09 10:38:55 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/10 19:48:19 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/10 21:48:03 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
-}
+	unsigned char	*str;
+	size_t			i;
 
+	i = 0;
+	c = (unsigned char)c;
+	str = (unsigned char *)s;
+	while (i < n)
+	{
+		if (str[i] == c)
+			return ((void *) &str[i]);
+		i++;
+	}
+	return (NULL);
+}
 /*int	main(void)
 {
-	char	c;
-
-	c = 'K';
-	printf("%c\n", ft_tolower(c));
+	const char *s = "42 Porto";
+	char c = 'P';
+	const char *result = ft_memchr(s, c, 4);
+	printf("%s", result);
 	return (0);
 }*/
