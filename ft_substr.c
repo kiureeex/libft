@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 15:50:48 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/11 14:51:55 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/11 15:07:57 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/11 15:24:23 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_bzero(void *s, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char	*ptr;
+	size_t	h;
+	char	*len;
 
-	i = 0;
-	ptr = (char *)s;
-	while (i < n)
-	{
-		ptr[i] = '\0';
-		i++;
-	}
+	h = 0;
 }
-
-/*int	main(void)
-{
-	char str[] = "arroz com morangos";
-
-	ft_bzero(str, 5);
-	printf("%s\n", str);
-	return (0);
-}*/
