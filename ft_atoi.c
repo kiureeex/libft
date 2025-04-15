@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 10:40:22 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/10 19:40:19 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:27:29 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while ((nptr[i] == ' ') || ((nptr[i] >= 7 && nptr[i] <= 13)))
+	while ((nptr[i] == ' ') || ((nptr[i] >= 9 && nptr[i] <= 13)))
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
@@ -39,6 +39,6 @@ int	ft_atoi(const char *nptr)
 
 /*int	main(void)
 {
-	char	nptr[] = "--1234ab567";
+	char	nptr[] = "\007 8";
 	printf("Aqui está o resultado do atoi:   %d\n", ft_atoi(nptr));
 }*/

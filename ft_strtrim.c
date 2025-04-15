@@ -6,13 +6,13 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/14 15:38:24 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/14 15:38:24 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/15 14:28:54 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	char	*str;
@@ -41,7 +41,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char	*s1;
 	char	*set;
@@ -50,4 +50,4 @@ int	main(void)
 	set = "-";
 	printf("%s\n", ft_strtrim(s1, set));
 	return (0);
-}
+}*/

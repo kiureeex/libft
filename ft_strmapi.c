@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 16:53:31 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/15 15:29:09 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/15 13:41:33 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/15 17:37:29 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int	i;
+	int		i;
+	char	*new;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
+	new = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (new == NULL)
+		return (NULL);
 	while (s[i] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
+		new[i] = f(i, s[i]);
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	return (NULL);
+	new[i] = '\0';
+	return (new);
 }
-
-/*int	main(void)
-{
-	char s[] = "arroz com massa";
-	int	c;
-
-	c = 'z';
-	printf("%s", ft_strchr(s, c));
-	return (0);
-}*/

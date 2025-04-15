@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/09 16:53:31 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/15 15:29:09 by clsantos         ###   ########.fr       */
+/*   Created: 2025/04/15 18:01:39 by clsantos          #+#    #+#             */
+/*   Updated: 2025/04/15 18:06:39 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
+		write(fd, &s[i], 1);
 		i++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	return (NULL);
 }
 
 /*int	main(void)
 {
-	char s[] = "arroz com massa";
-	int	c;
+	char	*s;
+	int		i;
 
-	c = 'z';
-	printf("%s", ft_strchr(s, c));
+	i = 1;
+	s = "trallalero trallala";
+	ft_putstr_fd(s, 1);
 	return (0);
 }*/

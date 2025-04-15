@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 18:08:22 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/10 19:40:32 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:15:43 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	i = 0;
 	c1 = (unsigned char *)dest;
 	c2 = (unsigned char *)src;
-	while (i < n)
+	while ((c1 || c2) && (i < n))
 	{
 		c1[i] = c2[i];
 		i++;

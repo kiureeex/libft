@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 20:18:03 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/09 10:18:56 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/15 14:39:19 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	ft_isprint(int c)
 {
-	if (c >= 0 && c <= 127)
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
