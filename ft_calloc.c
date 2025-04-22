@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 21:21:51 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/10 21:46:46 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/22 16:51:50 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 /*int	main(void)
 {
 	void	*ptr = ft_calloc(10, 20);
-	void	*ptr2 = calloc(10, 20);
 	printf("Falso: %p\n", ptr);
-	printf("Verdadeiro: %p\n", ptr2);
 	free(ptr);
-	free(ptr2);
 	return (0);
 }*/

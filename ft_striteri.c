@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 16:29:50 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/15 17:56:47 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/21 17:35:50 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 /*int main(void)
 {
-    char s[] = "TUngTUNgSAHUR";  // Mutable string
-    ft_striteri(s, ft_toupper_iter);  // Pass the correct function
-    printf("%s\n", s);  // Output the modified string
+    char s[] = "TUngTUNgSAHUR";
+    ft_striteri(s, ft_toupper_iter);
+    printf("%s\n", s);
     return 0;
 }*/

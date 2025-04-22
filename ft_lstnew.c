@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 13:23:32 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/17 19:38:09 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/22 18:20:32 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,21 @@ t_list	*ft_lstnew(void *content)
 	node->next = NULL;
 	return (node);
 }
-
-/*int main(void)
+/*void	print_node(t_list *node)
 {
-    char *content;
-    t_list *c;
-    content = "tungtungtungsahur";
-    c = ft_lstnew(content);
-    printf ("%s", (char *)c->content);
+	if (node)
+		printf("%s", (char *)node->content);
+	else
+		printf("No nulo");
+}
+
+int	main(void)
+{
+	t_list *node = ft_lstnew(" tung tung sahur bombardini gusini");
+
+	printf("Resultado do node: ");
+	print_node(node);
+
+	free(node);
+	return (0); 
 }*/

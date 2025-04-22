@@ -6,13 +6,13 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 13:26:58 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/17 19:34:39 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/22 17:01:13 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	n_count_words(char const *s, char c)
+static int	n_count_words(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -31,7 +31,7 @@ int	n_count_words(char const *s, char c)
 	return (count);
 }
 
-int	len_word(char const *s, char c)
+static int	len_word(char const *s, char c)
 {
 	int	i;
 	int	count;
@@ -48,7 +48,7 @@ int	len_word(char const *s, char c)
 	return (count);
 }
 
-char	*makeword(char const *s, char c)
+static char	*makeword(char const *s, char c)
 {
 	int		i;
 	char	*word;
@@ -66,7 +66,7 @@ char	*makeword(char const *s, char c)
 	return (word);
 }
 
-char	**free_data(char **split, int i)
+static char	**free_data(char **split, int i)
 {
 	while (i--)
 		free(split[i]);
@@ -101,3 +101,19 @@ char	**ft_split(char const *s, char c)
 	news[i] = NULL;
 	return (news);
 }
+/*int	main(void)
+{
+	char	str[] = "banana,uva,banana,,";
+	char	c = ',';
+	char	**result = ft_split(str, c);
+	int		i;
+
+	i = 0;
+	while (result[i] != NULL)
+	{
+		printf("%s\n", result[i]);
+		i++;
+	}
+	free_data(result, i);
+	return (0);
+}*/

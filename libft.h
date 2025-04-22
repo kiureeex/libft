@@ -6,7 +6,7 @@
 /*   By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 19:55:02 by clsantos          #+#    #+#             */
-/*   Updated: 2025/04/17 19:39:51 by clsantos         ###   ########.fr       */
+/*   Updated: 2025/04/21 19:19:05 by clsantos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,9 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);

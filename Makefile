@@ -6,7 +6,7 @@
 #    By: clsantos <clsantos@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/10 20:03:59 by clsantos          #+#    #+#              #
-#    Updated: 2025/04/17 19:55:38 by clsantos         ###   ########.fr        #
+#    Updated: 2025/04/21 19:33:05 by clsantos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft
 
 OBJ = $(SRC:.c=.o)
 
-SRCB = 	ft_lstnew.c ft_lstadd_back.c ft_lstadd_front.c ft_lstlast.c ft_lstsize.c \
+SRCB = 	ft_lstnew.c ft_lstsize.c ft_lstadd_front.c ft_lstadd_back.c ft_lstlast.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
 
 OBJB = $(SRCB:.c=.o)
 
