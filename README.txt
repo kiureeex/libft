@@ -1,39 +1,30 @@
-# Libft
+# Libft - 42 Porto
 
-Libft is a custom C library created at [42 Porto](https://www.42porto.com). It provides implementations for common C standard library functions and some additional utilities. The goal is to reinforce the understanding of memory management, pointers, and data structures.
+## 🌟 **General Description**  
+Libft is a custom implementation of essential C standard library functions. It was developed as part of the **42 Porto** curriculum to reinforce low-level programming skills, focusing on memory management, pointers, and data structures.
 
----
-
-## 📁 Project Structure
-
-- `libft.h` - Header file with function prototypes and macros
-- `*.c` - Source files containing function implementations
-- `Makefile` - Build management and compilation rules
+The library includes several functions for string manipulation, memory operations, and linked list management, designed to improve your understanding of how to work with C at a deeper level.
 
 ---
 
-## ⚙️ Key Features
+## 🛠 **How It Works**
 
-- **Re-implementing standard C functions**  
-  Includes functions for string manipulation, memory operations, and character checks.
+### **1️⃣ Standard C Functions**  
+Libft re-implements common C standard library functions, such as:  
+- **String manipulation**  
+  Functions like `ft_strlen`, `ft_strcpy`, `ft_strcat`, and `ft_strdup` for handling strings.  
+- **Memory operations**  
+  Functions like `ft_memcpy`, `ft_memmove`, and `ft_calloc` to handle memory copying, moving, and allocation.  
+- **Character handling**  
+  Functions like `ft_isdigit`, `ft_isalpha`, and `ft_tolower` to perform character checks.
 
-- **Memory management functions**  
-  Functions like `ft_memcpy`, `ft_memmove`, `ft_calloc` are re-implemented.
+### **2️⃣ Additional Utilities**  
+- **String functions**  
+  Functions like `ft_strjoin`, `ft_substr`, `ft_strtrim`, to manipulate strings.  
+- **Linked List**  
+  Implementing a custom linked list (`t_list`) with operations like `ft_lstnew`, `ft_lstadd_front`, `ft_lstiter`, and more.
 
-- **String handling**  
-  Includes `ft_strdup`, `ft_strjoin`, `ft_substr`, `ft_strtrim`, etc.
-
-- **Linked list implementation**  
-  Functions to create, manipulate, and iterate through a custom linked list (`t_list`).
-
----
-
-## 🔧 Usage
-
-1. **Compile the library:**
-   ```bash
-   make        # Build the libft.a static library
-   make clean  # Remove object files
-   make fclean # Remove all compiled files
-   make re     # Rebuild everything from scratch
-
+### **3️⃣ Usage**  
+Once compiled, you can use any of these functions by including `libft.h` in your project:
+```c
+#include "libft.h"
