@@ -14,7 +14,7 @@
 
 /*static void	ft_strup(char *s)
 {
-	char c;
+	char *c;
 
 	c = (char *)s;
 	while (*c)
@@ -38,3 +38,43 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		tmp = tmp->next;
 	}
 }
+
+/*int    main(void)
+{
+    t_list    *lst; 
+    t_list    *node2;
+    t_list    node3;
+    charstr1 = strdup("tralalero"); 
+    char  str2 = strdup("sahur"); 
+    charstr3 = strdup("tuuuung"); 
+    lst = ft_lstnew(str1); 
+    node2 = ft_lstnew(str2);
+    node3 = ft_lstnew(str3);
+    lst->next = node2; 
+    node2->next = node3;
+
+    printf("Antes:\n");
+    t_list tmp = lst; 
+    while (tmp)
+    {
+        printf("%s\n", (char)tmp->content);
+        tmp = tmp->next;
+    }
+    ft_lstiter(lst, ft_strup);
+
+    printf("\nDepois:\n");
+    tmp = lst; 
+    while (tmp)
+    {
+        printf("%s\n", (char *)tmp->content);
+        tmp = tmp->next;
+    }
+
+    free(str1);
+    free(str2);
+    free(str3);
+    free(lst); 
+    free(node2);
+    free(node3);
+    return (0);
+}*/
