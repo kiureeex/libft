@@ -1,42 +1,39 @@
 # Libft
 
-A custom C standard library implementation developed at [42 Porto](https://www.42porto.com).  
-This project focuses on mastering low-level memory manipulation, pointer logic, and basic data structures.
+Libft is a custom C library created at [42 Porto](https://www.42porto.com). It provides implementations for common C standard library functions and some additional utilities. The goal is to reinforce the understanding of memory management, pointers, and data structures.
 
 ---
 
 ## 📁 Project Structure
 
-- `libft.h` – Function prototypes and macros  
-- `*.c` – Function implementations  
-- `Makefile` – Compilation and rule management
+- `libft.h` - Header file with function prototypes and macros
+- `*.c` - Source files containing function implementations
+- `Makefile` - Build management and compilation rules
 
 ---
 
-## ⚙️ Features
+## ⚙️ Key Features
 
-### Part 1 – Libc Functions
-Re-implementations of standard C library functions, such as:
-- Character checks
-- String manipulation
-- Memory operations
-- Conversion functions
+- **Re-implementing standard C functions**  
+  Includes functions for string manipulation, memory operations, and character checks.
 
-### Part 2 – Additional Utilities
-- String join, split, trim, etc.
-- Advanced memory functions
+- **Memory management functions**  
+  Functions like `ft_memcpy`, `ft_memmove`, `ft_calloc` are re-implemented.
 
-### Bonus Part – Linked Lists
-Custom implementation of a singly linked list and common operations:
-- Creation, addition, iteration
-- Mapping, deletion
+- **String handling**  
+  Includes `ft_strdup`, `ft_strjoin`, `ft_substr`, `ft_strtrim`, etc.
+
+- **Linked list implementation**  
+  Functions to create, manipulate, and iterate through a custom linked list (`t_list`).
 
 ---
 
 ## 🔧 Usage
 
-```bash
-make        # Compiles libft into libft.a
-make clean  # Removes object files
-make fclean # Removes object files and libft.a
-make re     # Recompiles everything from scratch
+1. **Compile the library:**
+   ```bash
+   make        # Build the libft.a static library
+   make clean  # Remove object files
+   make fclean # Remove all compiled files
+   make re     # Rebuild everything from scratch
+
